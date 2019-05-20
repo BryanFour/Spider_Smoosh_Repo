@@ -176,12 +176,12 @@ public class LevelManager : MonoBehaviour
 	{
 		#region Ad Stuff
 		int gameOvers = PlayerPrefs.GetInt("GameOvers", 0);
-		if(gameOvers < 4)
+		if(gameOvers < 2)
 		{
 			gameOvers++;
 			PlayerPrefs.SetInt("GameOvers", gameOvers);
 		}
-		else if(gameOvers >= 4)
+		else if(gameOvers >= 2)
 		{
 			PlayerPrefs.SetInt("GameOvers", 0);
 			AdManager.Instance.PlayRegularAd();

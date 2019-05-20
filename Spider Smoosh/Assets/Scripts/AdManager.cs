@@ -17,6 +17,9 @@ public class AdManager : MonoBehaviour
 	[SerializeField] private string rewardedVideoPlacementID = "rewardedVideo";
 	[SerializeField] private string regularPlacementID = "video";
 
+	//	Error Debugging
+	//public GameObject error1;
+	//public GameObject error2;
 
 	void Awake()
 	{
@@ -43,6 +46,12 @@ public class AdManager : MonoBehaviour
 		Advertisement.Initialize(gameID, testMode);
 	}
 
+	private void Start()
+	{
+		//error1.SetActive(false);
+		//error2.SetActive(false);
+	}
+	
 	public void RequestRegularAd(Action<ShowResult> callback)
 	{
 #if UNITY_ADS
@@ -60,6 +69,26 @@ public class AdManager : MonoBehaviour
 		Debug.Log("Ads not supported");
 #endif
 	}
+	
+	/*
+	public void RequestRegularAd()
+	{
+#if UNITY_ADS
+		if (Advertisement.IsReady(regularPlacementID))
+		{
+			//ShowOptions so = new ShowOptions();
+			//so.resultCallback = callback;
+			Advertisement.Show(regularPlacementID);
+		}
+		else
+		{
+			Debug.Log("Ad not ready yet.");
+		}
+#else
+		Debug.Log("Ads not supported");
+#endif
+	}
+	*/
 
 	public void RequestRewardedAd(Action<ShowResult> callback)
 	{
@@ -83,6 +112,7 @@ public class AdManager : MonoBehaviour
 	public void PlayRegularAd()
 	{
 		RequestRegularAd(OnAdClosed);
+		//RequestRegularAd();
 	}
 	
 	public void PlayRewardedAd()
@@ -94,8 +124,8 @@ public class AdManager : MonoBehaviour
 	{
 		Debug.Log("Regular ad closed");
 	}
-
-	private void OnRewardedAdClosed(ShowResult result)
+	
+	private void OnRewardedAdClosed(ShowResult result)  ////// https://forum.unity.com/threads/unity-rewarded-ads-not-calling-back-first-time.608053/
 	{
 		Debug.Log("Rewarded ad closed");
 		switch (result)
@@ -106,10 +136,23 @@ public class AdManager : MonoBehaviour
 				break;
 			case ShowResult.Skipped:
 				Debug.Log("Ad skipped, no reward");
+				//error1.SetActive(true);
 				break;
 			case ShowResult.Failed:
 				Debug.Log("Ad failed");
+				//error2.SetActive(true);
 				break;
 		}
+	}
+	
+	//	Error debugging stuff.
+	public void CloseErrorOne()
+	{
+		//error1.SetActive(false);
+	}
+
+	public void CloseErrorTwo()
+	{
+		//error2.SetActive(false);
 	}
 }

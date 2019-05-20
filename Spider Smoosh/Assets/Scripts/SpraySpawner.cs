@@ -9,7 +9,7 @@ public class SpraySpawner : MonoBehaviour
 	//	The array of collectable spray can spawn points.
 	public Transform[] spawnPoints;
 	//	Number of seconds between spray spawns
-	private float spraySpawnInterval = 150;
+	private float spraySpawnInterval = 120;
 
 
 	void Start()
