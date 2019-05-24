@@ -229,8 +229,22 @@ public class LevelManager : MonoBehaviour
 		gameOverPanel.SetActive(true);
 		//	Set the game over bool to true.
 		gameOver = true;
-	}
 
+		//	Post high score to the leaderboard.
+		//PostToLeaderboard();
+	}
+	/*
+	private void PostToLeaderboard()
+	{
+		
+		//	Convert the currentScore from a float to a int
+		int score = (int)currentScore;
+		//	Convert the score int to a long called scoreToPost. ---- not realy converting (Long to Int dosnt seem to need converting.)
+		long scoreToPost = score;
+		//	Post the score to the leaderboard.
+		GooglePlayManager.PostToLeaderboard(scoreToPost);
+	}
+	*/
 	IEnumerator CountDown()
 	{   
 		countDownText.gameObject.SetActive(true);

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level.unity
     guid: b9dcd4fefab450b4189dc187ca6379ac
+  - enabled: 0
+    path: Assets/Scenes/PSAuth.unity
+    guid: ef76338157d50634cba86166fdffe3d9
   m_configObjects: {}

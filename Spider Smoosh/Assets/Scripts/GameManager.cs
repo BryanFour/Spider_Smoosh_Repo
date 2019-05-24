@@ -96,6 +96,12 @@ public class GameManager : MonoBehaviour
 		rewardPanel.SetActive(true);
 	}
 
+	public void ShowLeaderboard()
+	{
+		SoundManager.Instance.ButtonSFX();
+		//GooglePlayManager.ShowLeaderboardUI();
+	}
+
 	public void CloseRewardPanel()
 	{
 		rewardPanel.SetActive(false);

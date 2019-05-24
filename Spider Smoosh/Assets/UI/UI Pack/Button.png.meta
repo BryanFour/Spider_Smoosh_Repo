@@ -23,6 +23,9 @@ TextureImporter:
   - first:
       213: 1723543163705878722
     second: Blank_Square_Button
+  - first:
+      213: -6777312275735516574
+    second: Leaderboard_Button
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -261,7 +264,7 @@ TextureImporter:
         width: 185
         height: 189
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -269,6 +272,27 @@ TextureImporter:
       bones: []
       spriteID: d2a1a44ba3187db44822d53cb75a03f1
       internalID: 1723543163705878722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaderboard_Button
+      rect:
+        serializedVersion: 2
+        x: 2557
+        y: 349
+        width: 182
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438cb00d5d37b2547bbedd09b3a98116
+      internalID: -6777312275735516574
       vertices: []
       indices: 
       edges: []

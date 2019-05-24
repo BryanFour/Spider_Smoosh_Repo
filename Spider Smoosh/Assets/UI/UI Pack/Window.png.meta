@@ -37,7 +37,7 @@ TextureImporter:
     second: Small_Rectangle_Panel
   - first:
       213: -1398673877809080845
-    second: Window_11
+    second: Big_Rectangle_NoBanner
   - first:
       213: 1287136990087769296
     second: Window_12
@@ -376,7 +376,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Window_11
+      name: Big_Rectangle_NoBanner
       rect:
         serializedVersion: 2
         x: 2041
